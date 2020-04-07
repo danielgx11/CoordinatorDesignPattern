@@ -54,6 +54,7 @@ extension LearnViewController {
             overrideUserInterfaceStyle = .light
         }
         
+        
         self.view.backgroundColor = .white
         self.view.addSubview(tableView)
         
@@ -79,6 +80,8 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         cell.textLabel?.text = learnItems[indexPath.row].title
         cell.detailTextLabel?.text = learnItems[indexPath.row].level
+        
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }

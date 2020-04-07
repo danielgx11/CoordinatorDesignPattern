@@ -31,6 +31,12 @@
 		5CA797EF2435073D0016CFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA797ED2435073D0016CFFB /* LaunchScreen.storyboard */; };
 		5CA797FA243508230016CFFB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA797F9243508230016CFFB /* Coordinator.swift */; };
 		5CA797FC243508D30016CFFB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA797FB243508D30016CFFB /* AppCoordinator.swift */; };
+		5CD76951243B9CB900DF166C /* TrashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD76950243B9CB900DF166C /* TrashCoordinator.swift */; };
+		5CD76953243B9D3C00DF166C /* TrashTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD76952243B9D3C00DF166C /* TrashTableView.swift */; };
+		5CD76958243BA14100DF166C /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD76957243BA14100DF166C /* MoreCoordinator.swift */; };
+		5CD7695B243BA8AD00DF166C /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7695A243BA8AD00DF166C /* MoreViewController.swift */; };
+		5CD7695E243BB06F00DF166C /* MoreDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7695D243BB06F00DF166C /* MoreDetailCoordinator.swift */; };
+		5CD76960243BB0D200DF166C /* MoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7695F243BB0D200DF166C /* MoreDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		5CA797F02435073D0016CFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CA797F9243508230016CFFB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5CA797FB243508D30016CFFB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5CD76950243B9CB900DF166C /* TrashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashCoordinator.swift; sourceTree = "<group>"; };
+		5CD76952243B9D3C00DF166C /* TrashTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashTableView.swift; sourceTree = "<group>"; };
+		5CD76957243BA14100DF166C /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		5CD7695A243BA8AD00DF166C /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		5CD7695D243BB06F00DF166C /* MoreDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailCoordinator.swift; sourceTree = "<group>"; };
+		5CD7695F243BB0D200DF166C /* MoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 		5C19F330243657FC00234B0F /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				5C19F33524365CBF00234B0F /* Test Detail */,
 				5C19F3312436587300234B0F /* TestCoordinator.swift */,
 				5C19F33324365ACB00234B0F /* TestViewController.swift */,
 			);
@@ -94,6 +107,7 @@
 		5C19F33A243666AD00234B0F /* Favoritos */ = {
 			isa = PBXGroup;
 			children = (
+				5C19F34124366C6000234B0F /* Favorites Detail */,
 				5C19F33D24366A2400234B0F /* FavoritesCoordinator.swift */,
 				5C19F33F24366B4200234B0F /* FavoritesTableView.swift */,
 				5C19F34224366D2700234B0F /* FavoritesItem.swift */,
@@ -101,21 +115,15 @@
 			path = Favoritos;
 			sourceTree = "<group>";
 		};
-		5C19F33B243666AE00234B0F /* More */ = {
+		5C19F33C243666C700234B0F /* Learn Courses */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		5C19F33C243666C700234B0F /* Learn */ = {
-			isa = PBXGroup;
-			children = (
+				5C4833482437AC5100549ACF /* Learn Courses Detail */,
 				5C4833412437A2F800549ACF /* LearnCoordinator.swift */,
 				5C4833432437A3AC00549ACF /* LearnViewController.swift */,
 				5C4833462437A87400549ACF /* LearnItem.swift */,
 			);
-			path = Learn;
+			path = "Learn Courses";
 			sourceTree = "<group>";
 		};
 		5C19F34124366C6000234B0F /* Favorites Detail */ = {
@@ -127,20 +135,13 @@
 			path = "Favorites Detail";
 			sourceTree = "<group>";
 		};
-		5C4833452437A80000549ACF /* Trash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Trash;
-			sourceTree = "<group>";
-		};
-		5C4833482437AC5100549ACF /* Learn Detail */ = {
+		5C4833482437AC5100549ACF /* Learn Courses Detail */ = {
 			isa = PBXGroup;
 			children = (
 				5C4833492437AF8800549ACF /* LearnDetailCoordinator.swift */,
 				5C48334B2437B02800549ACF /* LearnDetailViewController.swift */,
 			);
-			path = "Learn Detail";
+			path = "Learn Courses Detail";
 			sourceTree = "<group>";
 		};
 		5C65E2A82436288E00661129 /* Views */ = {
@@ -149,13 +150,10 @@
 				5C65E2AB2436294100661129 /* Start */,
 				5C65E2AE24362DBB00661129 /* Tab Bar */,
 				5C19F330243657FC00234B0F /* Test */,
-				5C19F33524365CBF00234B0F /* Test Detail */,
 				5C19F33A243666AD00234B0F /* Favoritos */,
-				5C19F34124366C6000234B0F /* Favorites Detail */,
-				5C19F33C243666C700234B0F /* Learn */,
-				5C4833482437AC5100549ACF /* Learn Detail */,
-				5C4833452437A80000549ACF /* Trash */,
-				5C19F33B243666AE00234B0F /* More */,
+				5C19F33C243666C700234B0F /* Learn Courses */,
+				5CD7694F243B9CA500DF166C /* Trash */,
+				5CD76956243BA13200DF166C /* More */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +231,34 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		5CD7694F243B9CA500DF166C /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				5CD76950243B9CB900DF166C /* TrashCoordinator.swift */,
+				5CD76952243B9D3C00DF166C /* TrashTableView.swift */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		5CD76956243BA13200DF166C /* More */ = {
+			isa = PBXGroup;
+			children = (
+				5CD7695C243BB03800DF166C /* More Detail */,
+				5CD76957243BA14100DF166C /* MoreCoordinator.swift */,
+				5CD7695A243BA8AD00DF166C /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		5CD7695C243BB03800DF166C /* More Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5CD7695D243BB06F00DF166C /* MoreDetailCoordinator.swift */,
+				5CD7695F243BB0D200DF166C /* MoreDetailViewController.swift */,
+			);
+			path = "More Detail";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,19 +330,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C19F33424365ACB00234B0F /* TestViewController.swift in Sources */,
+				5CD7695B243BA8AD00DF166C /* MoreViewController.swift in Sources */,
 				5CA797FA243508230016CFFB /* Coordinator.swift in Sources */,
 				5C19F34024366B4200234B0F /* FavoritesTableView.swift in Sources */,
 				5C4833472437A87400549ACF /* LearnItem.swift in Sources */,
 				5C19F3322436587300234B0F /* TestCoordinator.swift in Sources */,
+				5CD76958243BA14100DF166C /* MoreCoordinator.swift in Sources */,
 				5C65E2B224362FA300661129 /* TabBarController.swift in Sources */,
 				5C48334C2437B02800549ACF /* LearnDetailViewController.swift in Sources */,
 				5CA797FC243508D30016CFFB /* AppCoordinator.swift in Sources */,
 				5C19F33724365CEA00234B0F /* TestDetailCoordinator.swift in Sources */,
 				5C4833442437A3AC00549ACF /* LearnViewController.swift in Sources */,
+				5CD7695E243BB06F00DF166C /* MoreDetailCoordinator.swift in Sources */,
 				5C19F33E24366A2400234B0F /* FavoritesCoordinator.swift in Sources */,
 				5C19F347243682CB00234B0F /* FavoritesDetailViewController.swift in Sources */,
+				5CD76953243B9D3C00DF166C /* TrashTableView.swift in Sources */,
 				5C65E2AA243628A000661129 /* StartCoordinator.swift in Sources */,
 				5C65E2B024362E4900661129 /* TabBarCoordinator.swift in Sources */,
+				5CD76960243BB0D200DF166C /* MoreDetailViewController.swift in Sources */,
 				5C19F3452436821600234B0F /* FavoritesDetailCoordinator.swift in Sources */,
 				5CA797E32435073C0016CFFB /* AppDelegate.swift in Sources */,
 				5C48334A2437AF8800549ACF /* LearnDetailCoordinator.swift in Sources */,
@@ -324,6 +355,7 @@
 				5C65E2AD2436295100661129 /* StartViewController.swift in Sources */,
 				5C4833422437A2F800549ACF /* LearnCoordinator.swift in Sources */,
 				5C19F33924365D5A00234B0F /* TestDetailViewController.swift in Sources */,
+				5CD76951243B9CB900DF166C /* TrashCoordinator.swift in Sources */,
 				5C19F34324366D2700234B0F /* FavoritesItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

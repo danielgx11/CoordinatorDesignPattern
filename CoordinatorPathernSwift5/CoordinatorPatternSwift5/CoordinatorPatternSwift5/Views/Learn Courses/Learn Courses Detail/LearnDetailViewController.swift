@@ -63,6 +63,7 @@ class LearnDetailViewController: UIViewController {
     // MARK: - Actions
     
     @objc func dismissDetailTapped() {
+        Items.sharedInstance.array.insert(learnItemTitle!, at: 0)
         coordinator?.dismissDetail()
     }
 }

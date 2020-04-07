@@ -15,8 +15,8 @@ class TestViewController: UIViewController {
     var coordinator: TestFlow?
     let showDetailButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Show Detail", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitle("Show detail", for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor.systemPink
         button.layer.cornerRadius = 10
         button.layer.shadowRadius = 5

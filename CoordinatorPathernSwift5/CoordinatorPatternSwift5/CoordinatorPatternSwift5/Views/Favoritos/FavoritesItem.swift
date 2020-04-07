@@ -9,5 +9,10 @@
 import UIKit
 
 struct FavoriteItem {
-    let title: String
+    var title: String
+}
+
+class Items {
+    static let sharedInstance = Items()
+    var array = [String]()
 }
