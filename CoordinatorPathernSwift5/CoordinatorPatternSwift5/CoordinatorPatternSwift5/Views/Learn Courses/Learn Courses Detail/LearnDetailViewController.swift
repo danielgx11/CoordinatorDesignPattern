@@ -40,9 +40,9 @@ class LearnDetailViewController: UIViewController {
     
     let dismissDetailButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Dismiss detail", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor.systemGray
+        button.setTitle("★ Favorite ★", for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
+        button.backgroundColor = UIColor.systemYellow
         button.layer.cornerRadius = 10
         button.layer.shadowRadius = 5
         button.layer.shadowColor = UIColor.gray.cgColor
@@ -53,6 +53,19 @@ class LearnDetailViewController: UIViewController {
         return button
     }()
     
+    // MARK: - Actions
+    
+    @objc func dismissDetailTapped() {
+        if isPossible(learnItemTitle!) {
+            Items.sharedInstance.array.insert(learnItemTitle!, at: 0)
+            coordinator?.dismissDetail()
+        } else {
+            let ac = UIAlertController(title: "Warning", message: "This item is already favorite!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(ac, animated: true)
+        }
+    }
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -60,12 +73,15 @@ class LearnDetailViewController: UIViewController {
         setupUI()
     }
     
-    // MARK: - Actions
+    // MARK: - Methods
     
-    @objc func dismissDetailTapped() {
-        Items.sharedInstance.array.insert(learnItemTitle!, at: 0)
-        coordinator?.dismissDetail()
+    func isPossible(_ item: String) -> Bool {
+        if Items.sharedInstance.array.contains(item) {
+            return false
+        }
+        return true
     }
+
 }
 
 // MARK: - UI Setup

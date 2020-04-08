@@ -65,7 +65,9 @@ extension FavoritesTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.coordinateToDetail(favoriteItems[indexPath.row])
+        // MARK: - Gambs
+        favoriteItems.append(.init(title:Items.sharedInstance.array[indexPath.row]))
+        coordinator?.coordinateToDetail(favoriteItems[0])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
