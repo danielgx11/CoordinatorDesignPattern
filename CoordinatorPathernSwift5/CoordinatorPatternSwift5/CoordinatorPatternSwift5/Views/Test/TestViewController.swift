@@ -70,5 +70,6 @@ extension TestViewController {
     private func customizeNavigationController() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Exit", style: .done, target: self, action: #selector(exitTapped))
         navigationController?.navigationBar.tintColor = .black
+        title = "Main View"
     }
 }

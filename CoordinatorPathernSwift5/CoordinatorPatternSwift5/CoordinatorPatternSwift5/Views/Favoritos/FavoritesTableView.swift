@@ -35,8 +35,7 @@ class FavoritesTableView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
     }
     
     // MARK: - Methods
@@ -52,12 +51,13 @@ class FavoritesTableView: UIViewController {
 extension FavoritesTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Items.sharedInstance.array.count
+        return FavoriteItems.sharedInstance.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = Items.sharedInstance.array[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = FavoriteItems.sharedInstance.array[indexPath.row]
         
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
@@ -66,11 +66,10 @@ extension FavoritesTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // MARK: - Gambs
-        favoriteItems.append(.init(title:Items.sharedInstance.array[indexPath.row]))
+        favoriteItems.append(.init(title:FavoriteItems.sharedInstance.array[indexPath.row]))
         coordinator?.coordinateToDetail(favoriteItems[0])
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
 
 // MARK: - UI Setup

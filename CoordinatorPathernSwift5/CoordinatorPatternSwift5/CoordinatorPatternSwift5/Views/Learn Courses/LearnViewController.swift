@@ -91,5 +91,9 @@ extension LearnViewController: UITableViewDelegate, UITableViewDataSource {
         coordinator?.coordinateToDetail(learnItems[indexPath.row].title, level: learnItems[indexPath.row].level)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == UITableViewCell.EditingStyle.delete else { return }
+        TrashItems.sharedInstance.array.insert(learnItems[indexPath.row].title , at: 0)
+    }
 }
 

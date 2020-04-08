@@ -31,6 +31,11 @@ class TrashTableView: UIViewController {
         customizeNavigationController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     // MARK: - Methods
     
     func customizeNavigationController() {
@@ -44,12 +49,13 @@ class TrashTableView: UIViewController {
 extension TrashTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trashItems.count
+        return TrashItems.sharedInstance.array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = trashItems[indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = TrashItems.sharedInstance.array[indexPath.row]
         
         return cell
     }

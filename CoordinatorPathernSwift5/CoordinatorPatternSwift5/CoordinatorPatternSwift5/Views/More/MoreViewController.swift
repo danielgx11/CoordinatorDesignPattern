@@ -15,7 +15,7 @@ class MoreViewController: UIViewController {
     var coordinator: MoreFlow?
     let showDetailButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Show detail", for: .normal)
+        button.setTitle("Show details", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor.systemPink
         button.layer.cornerRadius = 10
@@ -39,6 +39,13 @@ class MoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        customizeNavigationController()
+    }
+    
+    // MARK: - Methods
+    
+    func customizeNavigationController() {
+        title = "More"
     }
 }
 

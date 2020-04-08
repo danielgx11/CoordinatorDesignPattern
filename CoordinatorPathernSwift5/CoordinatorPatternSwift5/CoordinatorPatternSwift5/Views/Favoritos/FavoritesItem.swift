@@ -12,7 +12,12 @@ struct FavoriteItem {
     var title: String
 }
 
-class Items {
-    static let sharedInstance = Items()
+class FavoriteItems {
+    static let sharedInstance = FavoriteItems()
+    var array = [String]()
+}
+
+class TrashItems {
+    static let sharedInstance = TrashItems()
     var array = [String]()
 }

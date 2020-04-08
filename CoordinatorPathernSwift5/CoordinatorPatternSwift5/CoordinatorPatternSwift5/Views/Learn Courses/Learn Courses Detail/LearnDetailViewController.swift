@@ -57,7 +57,7 @@ class LearnDetailViewController: UIViewController {
     
     @objc func dismissDetailTapped() {
         if isPossible(learnItemTitle!) {
-            Items.sharedInstance.array.insert(learnItemTitle!, at: 0)
+            FavoriteItems.sharedInstance.array.insert(learnItemTitle!, at: 0)
             coordinator?.dismissDetail()
         } else {
             let ac = UIAlertController(title: "Warning", message: "This item is already favorite!", preferredStyle: .alert)
@@ -76,7 +76,7 @@ class LearnDetailViewController: UIViewController {
     // MARK: - Methods
     
     func isPossible(_ item: String) -> Bool {
-        if Items.sharedInstance.array.contains(item) {
+        if FavoriteItems.sharedInstance.array.contains(item) {
             return false
         }
         return true

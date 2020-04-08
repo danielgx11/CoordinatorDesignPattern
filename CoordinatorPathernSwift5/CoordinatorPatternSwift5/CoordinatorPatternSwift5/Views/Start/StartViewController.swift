@@ -44,6 +44,7 @@ class StartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = true
     }
 }
 
@@ -61,6 +62,6 @@ extension StartViewController {
         
         NSLayoutConstraint.activate([
             startButon.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 3), startButon.heightAnchor.constraint(equalToConstant: 50), startButon.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), startButon.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
-        ])
+                                    ])
     }
 }
